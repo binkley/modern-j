@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>${groupId}</groupId>
@@ -25,8 +27,10 @@
     </ciManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/binkley/modern-java.git</connection>
-        <developerConnection>scm:git:git@github.com:binkley/modern-java.git</developerConnection>
+        <connection>scm:git:git://github.com/binkley/modern-java.git
+        </connection>
+        <developerConnection>scm:git:git@github.com:binkley/modern-java.git
+        </developerConnection>
         <url>https://github.com/binkley/modern-java</url>
     </scm>
 
@@ -57,15 +61,15 @@
         <jsr305.version>3.0.1</jsr305.version>
         <junit.version>4.12</junit.version>
         <lombok.version>1.16.6</lombok.version>
-        <maven-surefire.version>2.18.1</maven-surefire.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
         <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
         <maven-failsafe-plugin.version>2.16</maven-failsafe-plugin.version>
-        <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+        <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
         <maven-jdeps-plugin.version>3.0.0</maven-jdeps-plugin.version>
         <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-surefire.version>2.18.1</maven-surefire.version>
         <project.build.outputEncoding>${java.charset}</project.build.outputEncoding>
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
@@ -185,7 +189,7 @@
                                 <dependencyConvergence>
                                     <uniqueVersions>true</uniqueVersions>
                                 </dependencyConvergence>
-                                <reactorModuleConvergence />
+                                <reactorModuleConvergence/>
                                 <requireJavaVersion>
                                     <version>${java.version}</version>
                                 </requireJavaVersion>
@@ -215,7 +219,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-jdeps-plugin</artifactId>
-		<version>${maven-jdeps-plugin.version}</version>
+                <version>${maven-jdeps-plugin.version}</version>
                 <executions>
                     <execution>
                         <goals>
