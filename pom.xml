@@ -8,7 +8,6 @@
     <groupId>hm.binkley</groupId>
     <artifactId>modern-java</artifactId>
     <version>0-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
     <licenses>
         <license>
