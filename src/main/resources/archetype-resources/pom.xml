@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>${groupId}</groupId>
@@ -18,38 +19,22 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/binkley/modern-java/issues</url>
+        <url>https://github.com/${owner-id}/${project-id}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis</system>
-        <url>https://travis-ci.org/binkley/modern-java</url>
+        <url>https://travis-ci.org/${owner-id}/${project-id}</url>
     </ciManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/binkley/modern-java.git
+        <connection>scm:git:git://github.com/${owner-id}/${project-id}.git
         </connection>
-        <developerConnection>scm:git:git@github.com:binkley/modern-java.git
+        <developerConnection>
+            scm:git:git@github.com:${owner-id}/${project-id}.git
         </developerConnection>
-        <url>https://github.com/binkley/modern-java</url>
+        <url>https://github.com/${owner-id}/${project-id}</url>
     </scm>
-
-    <organization>
-        <name>binkley's BLOG</name>
-        <url>http://binkley.blogspot.com</url>
-    </organization>
-
-    <developers>
-        <developer>
-            <id>binkley</id>
-            <name>B. K. Oxley (binkley)</name>
-            <email>binkley@alumni.rice.edu</email>
-            <organization>The Oxley Family</organization>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-    </developers>
 
     <properties>
         <!-- @formatter:off -->
