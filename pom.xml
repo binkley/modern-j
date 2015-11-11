@@ -15,6 +15,7 @@
     <properties>
         <!-- @formatter:off -->
         <archetype.version>2.4</archetype.version>
+        <buildplan-maven-plugin.version>1.1</buildplan-maven-plugin.version>
         <generateBackupPoms>false</generateBackupPoms>
         <java.charset>UTF-8</java.charset>
         <jgitflow-maven-plugin.version>1.0-m5.1</jgitflow-maven-plugin.version>
@@ -76,6 +77,11 @@
 
         <plugins>
             <plugin>
+                <groupId>fr.jcgay.maven.plugins</groupId>
+                <artifactId>buildplan-maven-plugin</artifactId>
+                <version>${buildplan-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
                 <groupId>external.atlassian.jgitflow</groupId>
                 <artifactId>jgitflow-maven-plugin</artifactId>
                 <version>${jgitflow-maven-plugin.version}</version>
@@ -89,6 +95,7 @@
                         <id>update-dependencies</id>
                         <phase>validate</phase>
                         <goals>
+                            <goal>update-parent</goal>
                             <goal>update-properties</goal>
                         </goals>
                     </execution>
