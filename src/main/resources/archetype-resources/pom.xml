@@ -19,26 +19,27 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/${owner-id}/${project-id}/issues</url>
+        <url>https://github.com/${github-id}/${project-id}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis</system>
-        <url>https://travis-ci.org/${owner-id}/${project-id}</url>
+        <url>https://travis-ci.org/${github-id}/${project-id}</url>
     </ciManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/${owner-id}/${project-id}.git
+        <connection>scm:git:git://github.com/${github-id}/${project-id}.git
         </connection>
         <developerConnection>
-            scm:git:git@github.com:${owner-id}/${project-id}.git
+            scm:git:git@github.com:${github-id}/${project-id}.git
         </developerConnection>
-        <url>https://github.com/${owner-id}/${project-id}</url>
+        <url>https://github.com/${github-id}/${project-id}</url>
     </scm>
 
     <properties>
         <!-- @formatter:off -->
         <buildplan-maven-plugin.version>1.1</buildplan-maven-plugin.version>
+        <extra-enforcer-rules.version>1.0-beta-4</extra-enforcer-rules.version>
         <generateBackupPoms>false</generateBackupPoms>
         <hamcrest.version>2.0.0.0</hamcrest.version>
         <java.charset>UTF-8</java.charset>
@@ -119,6 +120,46 @@
                 <version>${jgitflow-maven-plugin.version}</version>
             </plugin>
             <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${maven-enforcer-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>extra-enforcer-rules</artifactId>
+                        <version>${extra-enforcer-rules.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>enforce</id>
+                        <configuration>
+                            <rules>
+                                <banCircularDependencies/>
+                                <banDuplicateClasses/>
+                                <dependencyConvergence>
+                                    <uniqueVersions>true</uniqueVersions>
+                                </dependencyConvergence>
+                                <enforceBytecodeVersion>
+                                    <maxJdkVersion>${java.version}
+                                    </maxJdkVersion>
+                                </enforceBytecodeVersion>
+                                <reactorModuleConvergence/>
+                                <requireJavaVersion>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                                <!-- Polyglot needs 3.3.1+ -->
+                                <requireMavenVersion>
+                                    <version>[3.3.1,)</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>${versions-maven-plugin.version}</version>
@@ -127,6 +168,8 @@
                         <id>update-dependencies</id>
                         <phase>validate</phase>
                         <goals>
+                            <goal>update-parent</goal>
+                            <goal>update-child-modules</goal>
                             <goal>update-properties</goal>
                         </goals>
                     </execution>
@@ -165,33 +208,6 @@
                         </configuration>
                         <goals>
                             <goal>analyze</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>${maven-enforcer-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>enforce</id>
-                        <configuration>
-                            <rules>
-                                <dependencyConvergence>
-                                    <uniqueVersions>true</uniqueVersions>
-                                </dependencyConvergence>
-                                <reactorModuleConvergence/>
-                                <requireJavaVersion>
-                                    <version>${java.version}</version>
-                                </requireJavaVersion>
-                                <!-- Polyglot needs 3.3.1+ -->
-                                <requireMavenVersion>
-                                    <version>[3.3.1,)</version>
-                                </requireMavenVersion>
-                            </rules>
-                        </configuration>
-                        <goals>
-                            <goal>enforce</goal>
                         </goals>
                     </execution>
                 </executions>
