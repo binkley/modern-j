@@ -63,6 +63,7 @@
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
         <project.reporting.sourceEncoding>${java.charset}</project.reporting.sourceEncoding>
+        <root.basedir>${project.basedir}</root.basedir>
         <versions-maven-plugin.version>2.2</versions-maven-plugin.version>
         <!-- @formatter:on -->
     </properties>
@@ -193,6 +194,10 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>${versions-maven-plugin.version}</version>
+                <configuration>
+                    <rulesUri>file://${root.basedir}/maven-version-rules.xml
+                    </rulesUri>
+                </configuration>
                 <executions>
                     <execution>
                         <id>update-dependencies</id>
