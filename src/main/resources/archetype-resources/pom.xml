@@ -19,21 +19,21 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/${github-id}/${project-id}/issues</url>
+        <url>https://github.com/${githubId}/${projectId}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Travis</system>
-        <url>https://travis-ci.org/${github-id}/${project-id}</url>
+        <url>https://travis-ci.org/${githubId}/${projectId}</url>
     </ciManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/${github-id}/${project-id}.git
+        <connection>scm:git:git://github.com/${githubId}/${projectId}.git
         </connection>
         <developerConnection>
-            scm:git:git@github.com:${github-id}/${project-id}.git
+            scm:git:git@github.com:${githubId}/${projectId}.git
         </developerConnection>
-        <url>https://github.com/${github-id}/${project-id}</url>
+        <url>https://github.com/${githubId}/${projectId}</url>
     </scm>
 
     <properties>

@@ -6,8 +6,8 @@
         name="modern-java"
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0">
     <requiredProperties>
-        <requiredProperty key="github-id"/>
-        <requiredProperty key="project-id">
+        <requiredProperty key="githubId"/>
+        <requiredProperty key="projectId">
             <defaultValue>${artifactId}</defaultValue>
         </requiredProperty>
     </requiredProperties>
