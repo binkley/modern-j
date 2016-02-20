@@ -87,12 +87,14 @@
         </dependency>
 
         <dependency>
+            <!-- Only if using logback -->
             <groupId>org.codehaus.janino</groupId>
             <artifactId>janino</artifactId>
             <version>${janino.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <!-- Only if using logback -->
             <groupId>org.fusesource.jansi</groupId>
             <artifactId>jansi</artifactId>
             <version>${jansi.version}</version>
@@ -110,12 +112,6 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.hamcrest</groupId>
-                    <artifactId>hamcrest-core</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
@@ -231,6 +227,7 @@
                             <goal>resolve</goal>
                         </goals>
                     </execution>
+                    <!-- TODO: Rethink analyze or die on unused deps
                     <execution>
                         <id>analyze-or-die</id>
                         <phase>verify</phase>
@@ -241,6 +238,7 @@
                             <goal>analyze</goal>
                         </goals>
                     </execution>
+                    -->
                 </executions>
             </plugin>
             <plugin>
