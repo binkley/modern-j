@@ -15,6 +15,8 @@
         <fileSet encoding="UTF-8" filtered="false">
             <directory></directory>
             <includes>
+                <include>.gitignore</include>
+                <include>.mvn/jvm.config</include>
                 <include>maven-version-rules.xml</include>
                 <include>src/**/*</include>
             </includes>
@@ -24,7 +26,6 @@
             <includes>
                 <include>LICENSE.md</include>
                 <include>README.md</include>
-                <include>.gitignore</include>
             </includes>
         </fileSet>
     </fileSets>
