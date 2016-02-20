@@ -14,6 +14,9 @@ This software is in the Public Domain.  Please see [LICENSE.md](LICENSE.md).
 * Be fairly strict about code hygiene.
 * Autoupdate dependencies, plugins, et al.
 * Download sources and javadocs for dependencies.
+* Basic logback testing support.
+* Prefer AssertJ to Hamcrest.  Hamcrest is quite good, however using the
+  latest Hamcrest version conflicts with Spring Boot, et al.
 
 ## TODO
 
