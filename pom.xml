@@ -4,7 +4,7 @@
 
     <groupId>hm.binkley</groupId>
     <artifactId>modern-java-archetype</artifactId>
-    <version>0</version>
+    <version>1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>modern-java-archetype</name>
