@@ -48,7 +48,6 @@
         <jansi.version>1.11</jansi.version>
         <java.charset>UTF-8</java.charset>
         <java.version>1.8</java.version>
-        <javadoc.quiet>true</javadoc.quiet>
         <jgitflow-maven-plugin.version>1.0-m5.1</jgitflow-maven-plugin.version>
         <jsr305.version>3.0.1</jsr305.version>
         <junit.version>4.12</junit.version>
@@ -66,6 +65,7 @@
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
         <project.reporting.sourceEncoding>${java.charset}</project.reporting.sourceEncoding>
+        <quiet>true</quiet>
         <root.basedir>${project.basedir}</root.basedir>
         <surefire.printSummary>false</surefire.printSummary>
         <versions-maven-plugin.version>2.2</versions-maven-plugin.version>
