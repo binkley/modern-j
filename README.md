@@ -19,6 +19,12 @@ This software is in the Public Domain.  Please see [LICENSE.md](LICENSE.md).
   latest Hamcrest version conflicts with Spring Boot, et al.
 * System rules for junit and example integration test.
 
+## Releases
+
+### 0
+
+* Basic functionality for vanila Modern Java project.
+
 ## TODO
 
 * Hook in maven-profile extension, once figure out how to set up a
