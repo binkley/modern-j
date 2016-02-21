@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
+        http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="modern-java"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0">
+    <requiredProperties>
+        <requiredProperty key="githubId"/>
+        <requiredProperty key="projectId">
+            <defaultValue>${artifactId}</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet encoding="UTF-8" filtered="false">
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>.mvn/jvm.config</include>
+                <include>maven-version-rules.xml</include>
+                <include>src/**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+            <directory></directory>
+            <includes>
+                <include>LICENSE.md</include>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
