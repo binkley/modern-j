@@ -4,7 +4,7 @@
 
     <groupId>hm.binkley</groupId>
     <artifactId>modern-java-archetype</artifactId>
-    <version>0</version>
+    <version>1</version>
     <packaging>maven-archetype</packaging>
 
     <name>modern-java-archetype</name>
@@ -12,7 +12,7 @@
     <properties>
         <!-- @formatter:off -->
         <archetype.version>2.4</archetype.version>
-        <buildplan-maven-plugin.version>1.1</buildplan-maven-plugin.version>
+        <buildplan-maven-plugin.version>1.2</buildplan-maven-plugin.version>
         <generateBackupPoms>false</generateBackupPoms>
         <java.charset>UTF-8</java.charset>
         <jgitflow-maven-plugin.version>1.0-m5.1</jgitflow-maven-plugin.version>

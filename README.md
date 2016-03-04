@@ -15,8 +15,9 @@ This software is in the Public Domain.  Please see [LICENSE.md](LICENSE.md).
 * Autoupdate dependencies, plugins, et al.
 * Download sources and javadocs for dependencies.
 * Basic logback testing support (but not logback itself).
-* Prefer AssertJ to Hamcrest.  Hamcrest is quite good, however using the
-  latest Hamcrest version conflicts with Spring Boot, et al.
+* JUnit 4.
+* Prefer AssertJ to Hamcrest.  Hamcrest is quite good, however using Hamcrest
+  2 conflicts with Spring Boot, et al.
 * System rules for junit and example integration test.
 
 ## Releases
