@@ -38,9 +38,9 @@
 
     <properties>
         <!-- @formatter:off -->
-        <animal-sniffer-maven-plugin.version>1.14</animal-sniffer-maven-plugin.version>
+        <animal-sniffer-maven-plugin.version>1.15</animal-sniffer-maven-plugin.version>
         <assertj.version>3.3.0</assertj.version>
-        <buildplan-maven-plugin.version>1.1</buildplan-maven-plugin.version>
+        <buildplan-maven-plugin.version>1.2</buildplan-maven-plugin.version>
         <extra-enforcer-rules.version>1.0-beta-4</extra-enforcer-rules.version>
         <failsafe.printSummary>false</failsafe.printSummary>
         <generateBackupPoms>false</generateBackupPoms>
